@@ -9,8 +9,10 @@ Vagrant.configure("2") do |config|
         echo "$IP_NW$((IP_START+1))  worker-node01" >> /etc/hosts
         echo "$IP_NW$((IP_START+2))  worker-node02" >> /etc/hosts
     SHELL
-    config.vm.box = "bento/ubuntu-21.10"
+    config.vm.box = "bento/ubuntu-18.04"
+    config.vm.box_download_insecure=true
     config.vm.box_check_update = true
+    #config.vm.boot_timeout = 50000
 
     config.vm.define "master" do |master|
       master.vm.hostname = "master-node"

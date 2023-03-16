@@ -1,0 +1,804 @@
+[    0.000000] Linux version 4.15.0-191-generic (buildd@lcy02-amd64-032) (gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04)) #202-Ubuntu SMP Thu Aug 4 01:49:29 UTC 2022 (Ubuntu 4.15.0-191.202-generic 4.15.18)
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.15.0-191-generic root=LABEL=cloudimg-rootfs ro console=tty1 console=ttyS0
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] x86/fpu: x87 FPU will use FXSAVE
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000011cffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.5 present.
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] e820: last_pfn = 0x11d000 max_arch_pfn = 0x400000000
+[    0.000000] MTRR: Disabled
+[    0.000000] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+[    0.000000] CPU MTRRs all blank - virtualized system.
+[    0.000000] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+[    0.000000] e820: last_pfn = 0xdfff0 max_arch_pfn = 0x400000000
+[    0.000000] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+[    0.000000] Scanning 1 areas for low memory corruption
+[    0.000000] RAMDISK: [mem 0x359cb000-0x36cdcfff]
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+[    0.000000] ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+[    0.000000] ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[    0.000000] ACPI: DSDT 0x00000000DFFF0470 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+[    0.000000] ACPI: FACS 0x00000000DFFF0200 000040
+[    0.000000] ACPI: FACS 0x00000000DFFF0200 000040
+[    0.000000] ACPI: APIC 0x00000000DFFF0240 00005C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.000000] ACPI: SSDT 0x00000000DFFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+[    0.000000] ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+[    0.000000] ACPI: Reserving DSDT table memory at [mem 0xdfff0470-0xdfff2794]
+[    0.000000] ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+[    0.000000] ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+[    0.000000] ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff029b]
+[    0.000000] ACPI: Reserving SSDT table memory at [mem 0xdfff02a0-0xdfff046b]
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000011cffffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x11cfd3000-0x11cffdfff]
+[    0.000000] kvm-clock: cpu 0, msr 1:1cf52001, primary cpu clock
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: using sched offset of 8851615022 cycles
+[    0.000000] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000011cffffff]
+[    0.000000]   Device   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.000000]   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x000000011cffffff]
+[    0.000000] Reserved but unavailable: 104 pages
+[    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000011cffffff]
+[    0.000000] ACPI: PM-Timer IO Port: 0x4008
+[    0.000000] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+[    0.000000] e820: [mem 0xe0000000-0xfebfffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on KVM
+[    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.000000] random: get_random_bytes called from start_kernel+0x99/0x500 with crng_init=0
+[    0.000000] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:2 nr_cpu_ids:2 nr_node_ids:1
+[    0.000000] percpu: Embedded 50 pages/cpu s167936 r8192 d28672 u1048576
+[    0.000000] PV qspinlock hash table entries: 256 (order: 0, 4096 bytes)
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1019961
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.15.0-191-generic root=LABEL=cloudimg-rootfs ro console=tty1 console=ttyS0
+[    0.000000] Memory: 3964112K/4144696K available (12300K kernel code, 2484K rwdata, 4324K rodata, 2468K init, 2724K bss, 180584K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] Kernel/User page tables isolation: enabled
+[    0.000000] ftrace: allocating 39485 entries in 155 pages
+[    0.004000] Hierarchical RCU implementation.
+[    0.004000] 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=2.
+[    0.004000] 	Tasks RCU enabled.
+[    0.004000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[    0.004000] NR_IRQS: 524544, nr_irqs: 440, preallocated irqs: 16
+[    0.004000] Console: colour VGA+ 80x25
+[    0.004000] console [tty1] enabled
+[    0.004000] console [ttyS0] enabled
+[    0.004000] ACPI: Core revision 20170831
+[    0.004000] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.004000] APIC: Switch to symmetric I/O mode setup
+[    0.008000] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.008008] tsc: Detected 2591.998 MHz processor
+[    0.012018] Calibrating delay loop (skipped) preset value.. 5183.99 BogoMIPS (lpj=10367992)
+[    0.016009] pid_max: default: 32768 minimum: 301
+[    0.020131] Security Framework initialized
+[    0.024011] Yama: becoming mindful.
+[    0.028177] AppArmor: AppArmor initialized
+[    0.064000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.094083] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.096656] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.100508] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.113981] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+[    0.116008] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[    0.120010] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.124008] Spectre V2 : Mitigation: Retpolines
+[    0.128008] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.132008] Speculative Store Bypass: Vulnerable
+[    0.136160] MDS: Mitigation: Clear CPU buffers
+[    0.140007] MMIO Stale Data: Mitigation: Clear CPU buffers
+[    0.144275] Freeing SMP alternatives memory: 36K
+[    0.265916] smpboot: CPU0: Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz (family: 0x6, model: 0x4e, stepping: 0x3)
+[    0.272139] Performance Events: unsupported p6 CPU model 78 no PMU driver, software events only.
+[    0.280076] Hierarchical SRCU implementation.
+[    0.288230] NMI watchdog: Perf event create on CPU 0 failed with -2
+[    0.292009] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.300881] smp: Bringing up secondary CPUs ...
+[    0.309734] x86: Booting SMP configuration:
+[    0.312009] .... node  #0, CPUs:      #1
+[    0.004000] kvm-clock: cpu 1, msr 1:1cf52041, secondary cpu clock
+[    0.330148] TSC synchronization [CPU#0 -> CPU#1]:
+[    0.332000] Measured 99737 cycles TSC warp between CPUs, turning off TSC clock.
+[    0.332000] tsc: Marking TSC unstable due to check_tsc_sync_source failed
+[    0.340416] smp: Brought up 1 node, 2 CPUs
+[    0.344015] smpboot: Max logical packages: 1
+[    0.348015] smpboot: Total of 2 processors activated (10367.99 BogoMIPS)
+[    0.360193] devtmpfs: initialized
+[    0.364218] x86/mm: Memory block size: 128MB
+[    0.370049] evm: security.selinux
+[    0.372025] evm: security.SMACK64
+[    0.376009] evm: security.SMACK64EXEC
+[    0.380007] evm: security.SMACK64TRANSMUTE
+[    0.384008] evm: security.SMACK64MMAP
+[    0.388007] evm: security.apparmor
+[    0.392009] evm: security.ima
+[    0.396008] evm: security.capability
+[    0.405292] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.408024] futex hash table entries: 512 (order: 3, 32768 bytes)
+[    0.412302] pinctrl core: initialized pinctrl subsystem
+[    0.420007] RTC time: 16:02:18, date: 08/13/22
+[    0.429565] NET: Registered protocol family 16
+[    0.432288] audit: initializing netlink subsys (disabled)
+[    0.440009] audit: type=2000 audit(1660406549.544:1): state=initialized audit_enabled=0 res=1
+[    0.464019] cpuidle: using governor ladder
+[    0.468024] cpuidle: using governor menu
+[    0.472129] ACPI: bus type PCI registered
+[    0.476008] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.480816] PCI: Using configuration type 1 for base access
+[    0.500049] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.512824] ACPI: Added _OSI(Module Device)
+[    0.520011] ACPI: Added _OSI(Processor Device)
+[    0.524010] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.528008] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.532021] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.540025] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.544012] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.549375] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.576714] ACPI: Interpreter enabled
+[    0.580043] ACPI: (supports S0 S5)
+[    0.584009] ACPI: Using IOAPIC for interrupt routing
+[    0.593170] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.596359] ACPI: Enabled 2 GPEs in block 00 to 07
+[    0.621322] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.624024] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[    0.629558] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    0.632040] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.640534] PCI host bridge to bus 0000:00
+[    0.644012] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.648013] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.652011] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.656012] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+[    0.660015] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.677447] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.680013] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.684011] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.688011] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.761139] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    0.764050] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    0.782412] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    0.788331] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    0.792539] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    0.800008] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    0.809401] SCSI subsystem initialized
+[    0.816248] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.820000] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.820016] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.824008] vgaarb: loaded
+[    0.828157] ACPI: bus type USB registered
+[    0.832046] usbcore: registered new interface driver usbfs
+[    0.836080] usbcore: registered new interface driver hub
+[    0.840070] usbcore: registered new device driver usb
+[    0.844422] EDAC MC: Ver: 3.0.0
+[    0.856502] PCI: Using ACPI for IRQ routing
+[    0.864295] NetLabel: Initializing
+[    0.868009] NetLabel:  domain hash size = 128
+[    0.872007] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.876359] NetLabel:  unlabeled traffic allowed by default
+[    0.888556] clocksource: Switched to clocksource kvm-clock
+[    0.900807] VFS: Disk quotas dquot_6.6.0
+[    0.900807] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.900807] AppArmor: AppArmor Filesystem Enabled
+[    0.900807] pnp: PnP ACPI init
+[    0.900807] pnp: PnP ACPI: found 3 devices
+[    1.149330] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.152307] NET: Registered protocol family 2
+[    1.152307] IP idents hash table entries: 65536 (order: 7, 524288 bytes)
+[    1.182500] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    1.198115] TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    1.212050] TCP: Hash tables configured (established 32768 bind 32768)
+[    1.212498] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.212498] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.212498] NET: Registered protocol family 1
+[    1.212498] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    1.212498] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    1.212498] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    1.212498] Unpacking initramfs...
+[    2.313867] Freeing initrd memory: 19528K
+[    2.320174] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    2.333715] software IO TLB: mapped [mem 0xdbff0000-0xdfff0000] (64MB)
+[    2.343407] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x255cb518234, max_idle_ns: 440795279333 ns
+[    2.364036] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    2.384085] Scanning for low memory corruption every 60 seconds
+[    2.398235] Initialise system trusted keyrings
+[    2.410673] Key type blacklist registered
+[    2.417128] workingset: timestamp_bits=36 max_order=20 bucket_order=0
+[    2.431153] zbud: loaded
+[    2.445368] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.459599] fuse init (API version 7.26)
+[    2.572925] Key type asymmetric registered
+[    2.582274] Asymmetric key parser 'x509' registered
+[    2.591433] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    2.614505] io scheduler noop registered
+[    2.621172] io scheduler deadline registered
+[    2.634857] io scheduler cfq registered (default)
+[    2.645571] ACPI: AC Adapter [AC] (on-line)
+[    2.651657] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    2.673446] ACPI: Power Button [PWRF]
+[    2.680250] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    2.684008] ACPI: Sleep Button [SLPF]
+[    2.708181] ACPI: Battery Slot [BAT0] (battery present)
+[    2.716378] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    2.763171] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    2.812506] Linux agpgart interface v0.103
+[    2.835656] loop: module loaded
+[    2.849745] scsi host0: ata_piix
+[    2.855743] scsi host1: ata_piix
+[    2.859615] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    2.859615] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    2.885513] tun: Universal TUN/TAP device driver, 1.6
+[    2.894802] PPP generic driver version 2.4.2
+[    2.906507] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.916775] ehci-pci: EHCI PCI platform driver
+[    2.923391] ehci-platform: EHCI generic platform driver
+[    2.934588] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.945035] ohci-pci: OHCI PCI platform driver
+[    2.957785] ohci-platform: OHCI generic platform driver
+[    2.971315] uhci_hcd: USB Universal Host Controller Interface driver
+[    2.995614] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    3.066362] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    3.077943] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    3.120366] mousedev: PS/2 mouse device common for all mice
+[    3.135272] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    3.159752] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+[    3.180356] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    3.194239] i2c /dev entries driver
+[    3.202220] device-mapper: uevent: version 1.0.3
+[    3.221385] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[    3.246174] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.269564] BUG: stack guard page was hit at         (ptrval) (stack is         (ptrval)..        (ptrval))
+[    3.273223] kernel stack overflow (double-fault): 0000 [#1] SMP PTI
+[    3.273223] Modules linked in:
+[    3.273223] CPU: 1 PID: 1 Comm: swapper/0 Not tainted 4.15.0-191-generic #202-Ubuntu
+[    3.273223] Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    3.273223] RIP: 0010:error_entry+0x15/0x110
+[    3.273223] RSP: 0000:ffffad31c0634000 EFLAGS: 00010046
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: ffffffff874015ff RDI: ffffad31c0634118
+[    3.273223] RBP: ffffad31c06340d8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0634118 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223] FS:  0000000000000000(0000) GS:ffff8a6e1cd00000(0000) knlGS:0000000000000000
+[    3.273223] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[    3.273223] CR2: ffffad31c0633ff8 CR3: 000000009720a001 CR4: 00000000000206e0
+[    3.273223] Call Trace:
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  ? __do_page_fault+0x1f/0x4b0
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c06341c0 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0634268
+[    3.273223] RBP: ffffad31c0634228 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0634268 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0634310 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06343b8
+[    3.273223] RBP: ffffad31c0634378 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06343b8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0634460 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0634508
+[    3.273223] RBP: ffffad31c06344c8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0634508 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c06345b0 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0634658
+[    3.273223] RBP: ffffad31c0634618 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0634658 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0634700 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06347a8
+[    3.273223] RBP: ffffad31c0634768 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06347a8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0634850 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06348f8
+[    3.273223] RBP: ffffad31c06348b8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06348f8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c06349a0 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0634a48
+[    3.273223] RBP: ffffad31c0634a08 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0634a48 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0634af0 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0634b98
+[    3.273223] RBP: ffffad31c0634b58 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0634b98 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0634c40 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0634ce8
+[    3.273223] RBP: ffffad31c0634ca8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0634ce8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0634d90 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0634e38
+[    3.273223] RBP: ffffad31c0634df8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0634e38 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0634ee0 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0634f88
+[    3.273223] RBP: ffffad31c0634f48 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0634f88 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635030 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06350d8
+[    3.273223] RBP: ffffad31c0635098 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06350d8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635180 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0635228
+[    3.273223] RBP: ffffad31c06351e8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0635228 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c06352d0 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0635378
+[    3.273223] RBP: ffffad31c0635338 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0635378 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635420 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06354c8
+[    3.273223] RBP: ffffad31c0635488 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06354c8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635570 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0635618
+[    3.273223] RBP: ffffad31c06355d8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0635618 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c06356c0 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0635768
+[    3.273223] RBP: ffffad31c0635728 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0635768 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635810 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06358b8
+[    3.273223] RBP: ffffad31c0635878 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06358b8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635960 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0635a08
+[    3.273223] RBP: ffffad31c06359c8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0635a08 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635ab0 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0635b58
+[    3.273223] RBP: ffffad31c0635b18 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0635b58 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635c00 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0635ca8
+[    3.273223] RBP: ffffad31c0635c68 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0635ca8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635d50 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0635df8
+[    3.273223] RBP: ffffad31c0635db8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0635df8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635ea0 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0635f48
+[    3.273223] RBP: ffffad31c0635f08 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0635f48 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0635ff0 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0636098
+[    3.273223] RBP: ffffad31c0636058 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0636098 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0636140 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06361e8
+[    3.273223] RBP: ffffad31c06361a8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06361e8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0636290 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0636338
+[    3.273223] RBP: ffffad31c06362f8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0636338 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c06363e0 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0636488
+[    3.273223] RBP: ffffad31c0636448 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0636488 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0636530 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06365d8
+[    3.273223] RBP: ffffad31c0636598 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06365d8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0636680 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0636728
+[    3.273223] RBP: ffffad31c06366e8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0636728 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c06367d0 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0636878
+[    3.273223] RBP: ffffad31c0636838 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0636878 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0636920 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06369c8
+[    3.273223] RBP: ffffad31c0636988 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06369c8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0636a70 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0636b18
+[    3.273223] RBP: ffffad31c0636ad8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0636b18 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0636bc0 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0636c68
+[    3.273223] RBP: ffffad31c0636c28 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0636c68 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0636d10 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0636db8
+[    3.273223] RBP: ffffad31c0636d78 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0636db8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0636e60 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0636f08
+[    3.273223] RBP: ffffad31c0636ec8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0636f08 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0636fb0 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0637058
+[    3.273223] RBP: ffffad31c0637018 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0637058 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0637100 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06371a8
+[    3.273223] RBP: ffffad31c0637168 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06371a8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  ? acpi_ex_access_region+0x4b7/0x4c9
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0637250 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06372f8
+[    3.273223] RBP: ffffad31c06372b8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06372f8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  ? acpi_os_release_object+0xe/0x20
+[    3.273223]  ? acpi_ut_delete_generic_state+0x26/0x29
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c06373a0 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0637448
+[    3.273223] RBP: ffffad31c0637408 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0637448 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c06374f0 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0637598
+[    3.273223] RBP: ffffad31c0637558 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0637598 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0637640 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c06376e8
+[    3.273223] RBP: ffffad31c06376a8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c06376e8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  ? get_random_u32+0x75/0x80
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0637790 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0637838
+[    3.273223] RBP: ffffad31c06377f8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0637838 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  ? find_next_bit+0xb/0x10
+[    3.273223]  ? cpumask_next_and+0x2c/0x40
+[    3.273223]  ? find_busiest_group+0x139/0x9c0
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c06378e0 EFLAGS: 00010082
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0637988
+[    3.273223] RBP: ffffad31c0637948 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0637988 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  ? find_next_bit+0xb/0x10
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0637a30 EFLAGS: 00010086
+[    3.273223] RAX: 0000000000000028 RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 0000000000000028 RSI: 0000000000000000 RDI: ffffad31c0637ad8
+[    3.273223] RBP: ffffad31c0637a98 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000028
+[    3.273223] R13: ffffad31c0637ad8 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  ? __switch_to_asm+0x35/0x70
+[    3.273223]  ? __switch_to_asm+0x41/0x70
+[    3.273223]  ? __switch_to+0x96/0x4e0
+[    3.273223]  ? __switch_to_asm+0x35/0x70
+[    3.273223]  ? finish_task_switch+0x71/0x230
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:__do_page_fault+0x1f/0x4b0
+[    3.273223] RSP: 0000:ffffad31c0637b80 EFLAGS: 00010082
+[    3.273223] RAX: 000000000000500c RBX: 0000000000000000 RCX: ffffffff874009e7
+[    3.273223] RDX: 000000000000500c RSI: 0000000000000000 RDI: ffffad31c0637c28
+[    3.273223] RBP: ffffad31c0637be8 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: 000000000000500c
+[    3.273223] R13: ffffad31c0637c28 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? native_iret+0x7/0x7
+[    3.273223]  ? put_dec+0x18/0xa0
+[    3.273223]  ? number+0x30a/0x330
+[    3.273223]  do_page_fault+0x2e/0xe0
+[    3.273223]  page_fault+0x25/0x50
+[    3.273223] RIP: 0010:sync_regs+0x4/0x30
+[    3.273223] RSP: 0000:ffffad31c0637cd0 EFLAGS: 00010082
+[    3.273223] RAX: 800000009720a001 RBX: 0000000000000000 RCX: 0000000000000000
+[    3.273223] RDX: 0000000000000000 RSI: ffffffff874015cf RDI: ffffad31c0637ce0
+[    3.273223] RBP: ffffad31c0637cd0 R08: 0000000000000000 R09: 0000000000000000
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: ffffffff874015cf
+[    3.273223] R13: 0000000000000000 R14: 0000000000000000 R15: 0000000000000000
+[    3.273223]  ? general_protection+0x2f/0x50
+[    3.273223]  ? general_protection+0x2f/0x50
+[    3.273223]  error_entry+0x7b/0x110
+[    3.273223] RIP: 10282:0x10
+[    3.273223] RSP: 880aa892:0000000000000000 EFLAGS: ffffad31c0637d80 ORIG_RAX: ffffffff86a6df4a
+[    3.273223] RAX: 0000000000000002 RBX: ffffad31c0637dac RCX: 000000000000010f
+[    3.273223] RDX: 0000000000000000 RSI: ffffad31c0637dac RDI: 000000000000010f
+[    3.273223] RBP: ffffad31c0637d88 R08: ffff8a6e1cd2b120 R09: ffff8a6e18003200
+[    3.273223] R10: 0000000000000000 R11: 0000000000000000 R12: ffff8a6e13620a50
+[    3.273223] R13: 0000000000000002 R14: ffffad31c0637dec R15: 0000000000000005
+[    3.273223]  ? native_read_msr_safe+0xa/0x40
+[    3.273223]  ? set_debug_rodata+0x34/0x34
+[    3.273223]  ? msr_build_context+0xbf/0x120
+[    3.273223]  ? msr_initialize_bdw+0x40/0x40
+[    3.273223]  ? set_debug_rodata+0x34/0x34
+[    3.273223]  ? pm_check_save_msr+0x67/0x70
+[    3.273223]  ? do_one_initcall+0x52/0x1a0
+[    3.273223]  ? kernel_init_freeable+0x1b7/0x259
+[    3.273223]  ? rest_init+0xb0/0xb0
+[    3.273223]  ? kernel_init+0xe/0x110
+[    3.273223]  ? ret_from_fork+0x35/0x40
+[    3.273223] Code: 1c 25 d6 61 02 00 eb 05 49 0f ba ee 3f 41 0f 22 de e9 dc f1 ff ff fc 56 48 8b 74 24 08 48 89 7c 24 08 52 51 50 41 50 41 51 41 52 <41> 53 53 55 41 54 41 55 41 56 41 57 56 31 d2 31 c9 45 31 c0 45 
+[    3.273223] RIP: error_entry+0x15/0x110 RSP: ffffad31c0634000
+[    3.273223] ---[ end trace 38a6fd34aa0d4afa ]---
+[    3.273223] Kernel panic - not syncing: Attempted to kill init! exitcode=0x0000000b
+[    3.273223] 
+[    3.273223] Kernel Offset: 0x5a00000 from 0xffffffff81000000 (relocation range: 0xffffffff80000000-0xffffffffbfffffff)
+[    3.273223] ---[ end Kernel panic - not syncing: Attempted to kill init! exitcode=0x0000000b
+[    3.273223] 
